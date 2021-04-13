@@ -57,6 +57,9 @@ public class ConnectionHandler implements Runnable{
             catch (IOException | ClassNotFoundException ex) {
                  log.log(Level.WARNING,ex.getMessage(),ex);
             }
+            finally {
+                this.socket.close();   
+            }
 
         }
 }
